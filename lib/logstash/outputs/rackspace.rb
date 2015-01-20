@@ -5,7 +5,6 @@ require "logstash/namespace"
 class LogStash::Outputs::Rackspace < LogStash::Outputs::Base
 
   config_name "rackspace"
-  milestone 1
 
   default :codec, "json"
 
