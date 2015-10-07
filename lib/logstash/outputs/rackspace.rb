@@ -54,7 +54,7 @@ class LogStash::Outputs::Rackspace < LogStash::Outputs::Base
 
   public
   def receive(event)
-    return unless output?(event)
+    
 
     begin
       @rackspace_queue.messages.create :body => event, :ttl => @ttl
