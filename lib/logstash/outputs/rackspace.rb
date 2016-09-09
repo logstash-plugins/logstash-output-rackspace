@@ -54,15 +54,11 @@ class LogStash::Outputs::Rackspace < LogStash::Outputs::Base
 
   public
   def receive(event)
-    
-
     begin
-      @rackspace_queue.messages.create :body => event, :ttl => @ttl
-      #@rackspace_queue.messages.create :body => "some data here", :ttl => @ttl
+      @rackspace_queue.messages.create :body => event.to_hash, :ttl => @ttl
     rescue => e
       @logger.warn("Failed to send event to rackspace cloud queues", :event => event, :exception => e,
                    :backtrace => e.backtrace)
     end
-
   end # def receive
 end # class LogStash::Outputs::Rackspace
