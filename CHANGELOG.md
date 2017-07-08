@@ -1,3 +1,7 @@
+# 2.0.6
+  - Docs: Add plugin description
+# 2.0.5
+  - Docs: Bump patch level for doc build
 # 2.0.4
   - Depend on logstash-core-plugin-api instead of logstash-core, removing the need to mass update plugins on major releases of logstash
 # 2.0.3
