@@ -1,3 +1,6 @@
+## 2.0.7
+  - Fix some documentation issues
+
 # 2.0.6
   - Docs: Add plugin description
 # 2.0.5
